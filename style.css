@@ -53,6 +53,7 @@ form button:hover{
     align-items: center;
     /* box-shadow: 5px 5px 15px gray;
     margin-bottom: 1rem; */
+    transition: all .4s ease-in ;
     
 }
 .todo li{
@@ -69,4 +70,43 @@ form button:hover{
 .delete-button{
     color: red;
 }
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+.crossed{
+    text-decoration: line-through 2px;
+    opacity: 0.6;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
 
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+    color: #c57059;
+    width: 10rem;
+    cursor: pointer;
+    padding: .7rem;
+    
+
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.select::after{
+    content: '\25BC';
+    position: absolute;
+    padding: .7rem;
+    top: 0;
+    right: 0;
+    background-color: #c57059;
+    pointer-events: none;
+}
