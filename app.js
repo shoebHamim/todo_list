@@ -7,8 +7,7 @@ const todo_list=document.querySelector('.todo-list');
 // event listener
 
 todo_button.addEventListener('click',addTodo);
-
-
+todo_list.addEventListener('click',delete_todo);
 // function
 
 function addTodo(event){
@@ -30,7 +29,6 @@ function addTodo(event){
     complete_button.innerHTML='<i class="fa-solid fa-check"></i>'
     complete_button.classList.add('complete-button');
     todo_div.appendChild(complete_button);
-    complete_button.addEventListener('click',completeTask)
     // check button
     const delete_button=document.createElement('button')
     delete_button.innerHTML='<i class="fa-solid fa-trash"></i>'
@@ -43,6 +41,6 @@ function addTodo(event){
 
 }
 
-function completeTask(event){
-    console.log(event);
+function delete_todo(e){
+    console.log(e.target);
 }

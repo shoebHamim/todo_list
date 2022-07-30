@@ -33,7 +33,6 @@ form button{
     cursor: pointer;
 }
 form button:hover{
-    
     background: #7daeff;
 }
 
@@ -42,14 +41,32 @@ form button:hover{
     justify-content: center;
     align-items: center;
 }
-.todo-list li{
-    display: inline-block;
-    font-size: 1.5rem;
-    margin-right: 2rem;
+.todo-list{
+    min-width: 30%;
+    list-style: none;
 
 }
-.todo-list button{
-    margin: 0 .3rem;
-    padding: .3rem;
+.todo{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: 5px 5px 15px gray;
+    margin-bottom: 1rem; */
+    
+}
+.todo li{
+    flex: 1;
+}
+.complete-button,.delete-button{
+    margin: .3rem;
+    padding: .5rem ;
+    cursor: pointer;
+}
+.complete-button{
+    color: green;
+}
+.delete-button{
+    color: red;
 }
 
